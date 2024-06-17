@@ -25,16 +25,20 @@ namespace Assignment
                 Console.WriteLine("Meow");
             }
         }
-        static void Main(string[] args)
+
+        public class Program
         {
-            Animal animal = new Animal();
-            animal.MakeSound(); 
+            static void Main(string[] args)
+            {
+                Animal animal = new Animal();
+                animal.MakeSound();
 
-            Dog dog = new Dog();
-            dog.MakeSound(); 
+                Dog dog = new Dog();
+                dog.MakeSound();
 
-            Cat cat = new Cat();
-            cat.MakeSound(); 
+                Cat cat = new Cat();
+                cat.MakeSound();
+            }
         }
     }
 }
