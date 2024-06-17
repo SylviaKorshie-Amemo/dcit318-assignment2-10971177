@@ -1,40 +1,40 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-// Inheritance and Method Overriding
-class Animal
+﻿using System;
+namespace Assignment
 {
-
-    public virtual void MakeSound()
+    class Animal
     {
-        Console.WriteLine("Some generic sound");
-    }
 
-
-    class Dog : Animal
-    {
-        public override void MakeSound()
+        public virtual void MakeSound()
         {
-            Console.WriteLine("Bark");
+            Console.WriteLine("Some generic sound");
         }
-    }
 
-    class Cat : Animal
-    {
-        public override void MakeSound()
+
+        class Dog : Animal
         {
-            Console.WriteLine("Meow");
+            public override void MakeSound()
+            {
+                Console.WriteLine("Bark");
+            }
         }
-    }
-    static void Main(string[] args)
-    {
-        // Inheritance and Method Overriding
-        Animal animal = new Animal();
-        animal.MakeSound(); // Prints "Some generic sound"
 
-        Dog dog = new Dog();
-        dog.MakeSound(); // Prints "Bark"
+        class Cat : Animal
+        {
+            public override void MakeSound()
+            {
+                Console.WriteLine("Meow");
+            }
+        }
+        static void Main(string[] args)
+        {
+            Animal animal = new Animal();
+            animal.MakeSound(); 
 
-        Cat cat = new Cat();
-        cat.MakeSound(); // Prints "Meow"
+            Dog dog = new Dog();
+            dog.MakeSound(); 
+
+            Cat cat = new Cat();
+            cat.MakeSound(); 
+        }
     }
 }
